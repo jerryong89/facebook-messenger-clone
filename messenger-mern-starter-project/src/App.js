@@ -76,7 +76,7 @@ function App() {
         {
           messages.map(message  => (
             <Message key={message._id} message={message} username={username} />
-          ))
+          )).reverse()
         }
       </FlipMove>
     </div>
