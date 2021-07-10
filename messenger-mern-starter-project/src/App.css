@@ -4,7 +4,6 @@
 
 .app__form {
   padding: 20px;
-  position: fixed;
   bottom: 20px;
   z-index: 1;
   background-color: #e9e9eb;
@@ -23,4 +22,14 @@
 
 .app__iconButton {
   width: 30px;
+}
+
+img {
+  margin: 20px 0
+}
+
+.textBox{
+ overflow: scroll;
+ white-space: nowrap;
+ height: 550px
 }

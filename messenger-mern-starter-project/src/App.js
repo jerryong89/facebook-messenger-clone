@@ -63,7 +63,18 @@ function App() {
       <img src="https://facebookbrand.com/wp-content/uploads/2018/09/Header-e1538151782912.png?w=100&h=100" alt="messenger logo" />
       <h2>Welcome {username}</h2>
 
-      <form className='app__form' >
+      <div className="textBox" >
+        <FlipMove  >
+        {
+          messages.map(message => (
+            <Message key={message._id} message={message} username={username} />
+          )).reverse()
+        }
+      </FlipMove>
+    </div>
+
+    <div >
+       <form className='app__form' >
         <FormControl className='app__formControl' >
           <Input className='app__input' placeholder='Enter a message...' value={input} onChange={(e) => setInput(e.target.value)} />
           <IconButton className='app__iconButton' variant='text' color='primary' disabled={!input} onClick={sendMessage} type="submit" >
@@ -71,14 +82,10 @@ function App() {
           </IconButton>
         </FormControl>
       </form>
+    </div>
 
-      <FlipMove>
-        {
-          messages.map(message  => (
-            <Message key={message._id} message={message} username={username} />
-          )).reverse()
-        }
-      </FlipMove>
+
+
     </div>
   );
 }
