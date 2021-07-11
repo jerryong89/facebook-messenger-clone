@@ -58,13 +58,18 @@ function App() {
     setInput('')
   }
 
+  useEffect (()=> {
+    var elem = document.getElementById('data');
+    elem.scrollTop = elem.scrollHeight;
+  })
+
   return (
     <div className="App">
       <img src="https://facebookbrand.com/wp-content/uploads/2018/09/Header-e1538151782912.png?w=100&h=100" alt="messenger logo" />
       <h2>Welcome {username}</h2>
 
-      <div className="textBox" >
-        <FlipMove  >
+    <div id="data" className="textBox">
+      <FlipMove>
         {
           messages.map(message => (
             <Message key={message._id} message={message} username={username} />
@@ -73,7 +78,7 @@ function App() {
       </FlipMove>
     </div>
 
-    <div >
+    <div className="formContainer">
        <form className='app__form' >
         <FormControl className='app__formControl' >
           <Input className='app__input' placeholder='Enter a message...' value={input} onChange={(e) => setInput(e.target.value)} />

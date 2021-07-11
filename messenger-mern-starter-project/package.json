@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "auto-scroll-container": "^2.1.0",
     "axios": "^0.21.1",
     "firebase": "^7.24.0",
     "firebase-tools": "^8.11.2",

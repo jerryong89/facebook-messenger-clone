@@ -31,5 +31,15 @@ img {
 .textBox{
  overflow: scroll;
  white-space: nowrap;
- height: 550px
+ height: 570px;
+ margin: 0 0;
+ padding: 0 0;
+}
+
+.my-scroll-style {
+  height: 100vh;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: scroll;
 }
